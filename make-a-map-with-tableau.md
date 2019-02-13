@@ -2,13 +2,13 @@
 
 Today, we'll build an interactive, data-rich map with Tableau. As is the case with its data visualization capabilities, Tableau is a powerful tool, but its interface can be a bit confusing. In particular, it's important to place measures and dimensions on the canvas in a particular order -- trust me, I discovered this the hard way after clicking around fruitlessly for hours.
 
-We'll be building a map that shows the home counties of people accused of witchcraft in Scotland in the late sixteenth through mid-eighteenth centuries. You can download the CSV here.
+We'll be building a map that shows the home counties of people accused of witchcraft in Scotland in the late sixteenth through mid-eighteenth centuries. The source of the data is the wonderful [Survey of Scottish Witchcraft Database](http://witches.shca.ed.ac.uk/) from the University of Edinburgh. Please download the CSV [here](https://www.dropbox.com/s/p3xpsd7ubpmg6m5/accused_witches.csv?dl=1).
 
 ## Open Tableau and connect to your data
 
 As you did before, you'll click on **Connect to text file** (*not* **Connect to Excel file**), because Tableau considers CSVs text files. Select the dataset you downloaded earlier.
 
-Once your data has loaded in, click on the orange **Sheet 1 **button at the bottom of the Tableau window.
+Once your data has loaded in, click on the orange **Sheet 1** button at the bottom of the Tableau window.
 
 ![][1]
 
@@ -28,7 +28,7 @@ To change it, click on the tiny **Abc** icon to the right of the word **Date**. 
 
 For reasons that I confess aren't entirely clear to me, it really matters in which order you add dimensions and measures to the canvas during this process. So follow along as closely as you can!
 
-**Double-click** first **Latitude** and then **Longitude**. (Do *not use ***Latitude (generated) **or** Longitude (generated)**. We'll talk about what these are in the next tutorial.) 
+**Double-click** first **Latitude** and then **Longitude**. (Do *not use* **Latitude (generated)** or **Longitude (generated)**. We'll talk about what these are in the next tutorial.)
 
 These field names will appear in the **Rows** and **Columns** panes, respectively. A map will appear on the canvas, containing a single data point. (Apparently the average of the longitude and latitude!)
 
@@ -38,7 +38,7 @@ These field names will appear in the **Rows** and **Columns** panes, respectivel
 
 ## Add points to your map
 
-Let's create a map that shows a point for the home county of each person accused of witchcraft. To do this, drag the **Accused ID** dimension onto the **Detail** button within the **Marks** pane. (Got that? Drop the **Accused ID **onto the** Detail **button.)
+Let's create a map that shows a point for the home county of each person accused of witchcraft. To do this, drag the **Accused ID** dimension onto the **Detail** button within the **Marks** pane. (Got that? Drop the **Accused ID** onto the **Detail** button.)
 
 (Why the **Accused ID** dimension? It's because each record has a unique Accused ID number, so Tableau will be sure to map each record.)
 
@@ -108,7 +108,7 @@ First, drag the **Date** dimension to the **Filter** pane.
 
 ## Filter points (2)
 
-A popup window will ask you how you want to filter on dates. We want to use years, so select **Years**. 
+A popup window will ask you how you want to filter on dates. We want to use years, so select **Years**.
 
 In the next popup window, select **All** (to indicate that we want to use all the years in our filter) and press **OK**.
 
@@ -118,7 +118,7 @@ In the next popup window, select **All** (to indicate that we want to use all th
 
 ## Filter points (3)
 
-In the **Filters** pane, you now have a **YEAR(Date) **dimension. Click on it to produce a drop-down menu. From that menu, select **Continuous**.
+In the **Filters** pane, you now have a **YEAR(Date)** dimension. Click on it to produce a drop-down menu. From that menu, select **Continuous**.
 
 Why continuous? As you'll see in the next step, we want Tableau to treat dates not individually but as a flowing range of values.
 
